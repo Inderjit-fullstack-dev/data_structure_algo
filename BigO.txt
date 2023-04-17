@@ -1,0 +1,86 @@
+# What is BigO notation?
+It is a way to measure how efficient the algorithm when the input grows. 
+There are two parts of BigO notation
+1. Time complexity : How much time is taken by the program
+2. Space complexity : How much space is taken by the program
+
+For Example: We have two pieces of code, how to determine which code is better? then the answer is Big O Notation.
+
+---------------------------------------------------------
+
+Let's assume we have an array and we have to find a number from the array. what is the best, average and worst case.
+
+[1, 2, 3, 4, 5, 6, 7, 8]
+
+answer: 
+    The best case would be if the number is 1 (Omega)
+    The average case would be if the number is 4 (Theta)
+    The worst case would be if the number is 8 (Big O)
+
+---------------------------------------------------------
+
+Time complexity types
+
+1. Constant time O(1)
+2. Linear time O(N)
+3. Logarithmic O(logN)
+4. Quadratic O(N*N)
+
+----------------------------------------------------------
+
+1. Constant Time
+
+int add(int a, int b) {
+    return a + b;
+}
+
+The number of iteration will always one in the above code so it is O(1)
+
+
+
+2. Linear Time
+
+void printNumber(int n) {
+    // the number of iteration 
+    for(int i = 1; i <= n; i++) {
+        System.out.println(i);
+    }
+}
+
+The number of iteration depends on the number of input we have passed. so it is linear O(n)
+
+Avoid Constants
+
+void printNumber(int n) {
+ 
+    // O(n)
+    for(int i = 1; i <= n; i++) { 
+        System.out.println(i);
+    }
+
+    // O(n)
+    for(int i = 1; i <= n; i++) {
+        System.out.println(i);
+    }
+
+    // so it is O(n+n) => O(2n) => O(N) (we can avoid the constants)
+ }
+
+ 3. Logarithmic O
+
+
+4. Quadratic Time
+
+void printNumber(int n) {
+ 
+    for(int i = 1; i <= n; i++) { 
+        for(int j = 1; j <= n; j++) {
+            System.out.println(i + " " + j);
+        }
+    }
+
+    // so it is O(n*n)
+    // the iteration of the loops are the square of it n
+ }
+
+
